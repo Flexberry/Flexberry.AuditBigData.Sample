@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Class1",
+  "name": "AuditTestSimpleClass1E",
+  "className": "Class1E",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "audit-test-simple-class1",
+      "modelProjection": "Class1E"
+    }
+  ]
+}

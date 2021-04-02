@@ -1,0 +1,330 @@
+﻿{
+  "name": "AuditTestSimpleClass2",
+  "modelName": "audit-test-simple-class2",
+  "className": "Class2",
+  "nameSpace": "AuditTestSimple",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "field21",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "field22",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "createTime",
+      "type": "date",
+      "flexberryType": "AuditNullableDateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "creator",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "editTime",
+      "type": "date",
+      "flexberryType": "AuditNullableDateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "editor",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": false,
+      "name": "class1",
+      "relatedTo": "audit-test-simple-class1",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": false,
+      "name": "class4",
+      "relatedTo": "audit-test-simple-class4",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "class3",
+      "relatedTo": "audit-test-simple-class3",
+      "inverse": "class2"
+    }
+  ],
+  "projections": [
+    {
+      "name": "AuditView",
+      "modelName": "audit-test-simple-class2",
+      "attrs": [
+        {
+          "name": "field21",
+          "caption": "",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "field22",
+          "caption": "",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "createTime",
+          "caption": "",
+          "hidden": false,
+          "index": 8
+        },
+        {
+          "name": "creator",
+          "caption": "",
+          "hidden": false,
+          "index": 9
+        },
+        {
+          "name": "editTime",
+          "caption": "",
+          "hidden": false,
+          "index": 10
+        },
+        {
+          "name": "editor",
+          "caption": "",
+          "hidden": false,
+          "index": 11
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Class1",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "field11",
+              "caption": "",
+              "hidden": false,
+              "index": 3
+            },
+            {
+              "name": "field12",
+              "caption": "",
+              "hidden": false,
+              "index": 4
+            }
+          ],
+          "index": 2,
+          "type": "default",
+          "caption": "Class1",
+          "name": "class1",
+          "relatedTo": "audit-test-simple-class1",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Class4",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "field41",
+              "caption": "",
+              "hidden": false,
+              "index": 6
+            },
+            {
+              "name": "field42",
+              "caption": "",
+              "hidden": false,
+              "index": 7
+            }
+          ],
+          "index": 5,
+          "type": "default",
+          "caption": "",
+          "name": "class4",
+          "relatedTo": "audit-test-simple-class4",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "AuditView",
+          "caption": "Class3",
+          "name": "class3",
+          "relatedTo": "audit-test-simple-class3",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "Class2E",
+      "modelName": "audit-test-simple-class2",
+      "attrs": [
+        {
+          "name": "field21",
+          "caption": "Поле21",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "field22",
+          "caption": "Поле22",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Class1",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "field11",
+              "caption": "Поле11",
+              "hidden": false,
+              "index": 3
+            },
+            {
+              "name": "field12",
+              "caption": "Поле12",
+              "hidden": false,
+              "index": 4
+            }
+          ],
+          "index": 2,
+          "type": "default",
+          "caption": "Class1",
+          "name": "class1",
+          "relatedTo": "audit-test-simple-class1",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Class4",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "field41",
+              "caption": "Поле41",
+              "hidden": false,
+              "index": 6
+            },
+            {
+              "name": "field42",
+              "caption": "Поле42",
+              "hidden": false,
+              "index": 7
+            }
+          ],
+          "index": 5,
+          "type": "default",
+          "caption": "Class4",
+          "name": "class4",
+          "relatedTo": "audit-test-simple-class4",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "Class3E",
+          "caption": "Class3",
+          "name": "class3",
+          "relatedTo": "audit-test-simple-class3",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "Class2L",
+      "modelName": "audit-test-simple-class2",
+      "attrs": [
+        {
+          "name": "field21",
+          "caption": "Поле21",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "field22",
+          "caption": "Поле22",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Class1",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "field11",
+              "caption": "Поле11",
+              "hidden": false,
+              "index": 3
+            },
+            {
+              "name": "field12",
+              "caption": "Поле12",
+              "hidden": false,
+              "index": 4
+            }
+          ],
+          "index": 2,
+          "type": "default",
+          "caption": "",
+          "name": "class1",
+          "relatedTo": "audit-test-simple-class1",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

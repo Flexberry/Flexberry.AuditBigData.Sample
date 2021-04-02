@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "audit-test-simple-class2-e",
+  "editForm": "audit-test-simple-class2-e",
+  "external": false,
+  "caption": "Class2",
+  "name": "AuditTestSimpleClass2L",
+  "className": "Class2L",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "audit-test-simple-class2",
+      "modelProjection": "Class2L"
+    }
+  ]
+}

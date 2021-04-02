@@ -1,0 +1,36 @@
+﻿{
+  "applicationCaption": "Tests audit flexberry",
+  "applicationTitle": "Tests audit flexberry",
+  "items": [
+    {
+      "link": null,
+      "menuName": "flexberry-audit-tests",
+      "caption": "Flexberry.Audit.Tests",
+      "title": "Flexberry.Audit.Tests",
+      "children": [
+        {
+          "link": "audit-test-simple-class4-l",
+          "menuName": null,
+          "caption": "Class4",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "audit-test-simple-class1-l",
+          "menuName": null,
+          "caption": "Class1",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "audit-test-simple-class2-l",
+          "menuName": null,
+          "caption": "Class2",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

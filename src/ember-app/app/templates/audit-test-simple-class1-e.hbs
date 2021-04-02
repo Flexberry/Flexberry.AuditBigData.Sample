@@ -1,0 +1,45 @@
+<h3 class="ui header">{{t "forms.audit-test-simple-class1-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.field11
+      class=(if (v-get validationObject "field11" "isInvalid") "error")
+      label=(t "forms.audit-test-simple-class1-e.field11-caption")
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "field11" "messages")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.field12
+      class=(if (v-get validationObject "field12" "isInvalid") "error")
+      label=(t "forms.audit-test-simple-class1-e.field12-caption")
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "field12" "messages")}}
+  </div>
+</form>
