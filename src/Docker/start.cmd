@@ -1,1 +1,1 @@
-docker-compose -p auditteststand up -d
+docker-compose -p audittestsimple up -d

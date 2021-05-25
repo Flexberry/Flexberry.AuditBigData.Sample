@@ -458,7 +458,7 @@ namespace AuditTestSimple
             /// <summary>
             /// Включён ли аудит операции изменения.
             /// </summary>
-            public static bool UpdateAudit = false;
+            public static bool UpdateAudit = true;
             
             /// <summary>
             /// Имя представления для аудирования операции изменения.

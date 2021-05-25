@@ -42,9 +42,13 @@ namespace AuditTestSimple
             "Class2.Class1",
             "Class2.Class1.Field11",
             "Class2.Class1.Field12"})]
-    [View("Class3E", new string[] {
+    [View("Class3D", new string[] {
             "Field31 as \'Поле31\'",
-            "Field32 as \'Поле32\'"})]
+            "Field32 as \'Поле32\'",
+            "Class2"})]
+    [View("Class3L", new string[] {
+            "Field31",
+            "Field32"})]
     public class Class3 : ICSSoft.STORMNET.DataObject, IDataObjectWithAuditFields
     {
         
@@ -310,13 +314,24 @@ namespace AuditTestSimple
             }
             
             /// <summary>
-            /// "Class3E" view.
+            /// "Class3D" view.
             /// </summary>
-            public static ICSSoft.STORMNET.View Class3E
+            public static ICSSoft.STORMNET.View Class3D
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("Class3E", typeof(AuditTestSimple.Class3));
+                    return ICSSoft.STORMNET.Information.GetView("Class3D", typeof(AuditTestSimple.Class3));
+                }
+            }
+            
+            /// <summary>
+            /// "Class3L" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View Class3L
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("Class3L", typeof(AuditTestSimple.Class3));
                 }
             }
         }
@@ -360,7 +375,7 @@ namespace AuditTestSimple
             /// <summary>
             /// Включён ли аудит операции изменения.
             /// </summary>
-            public static bool UpdateAudit = false;
+            public static bool UpdateAudit = true;
             
             /// <summary>
             /// Имя представления для аудирования операции изменения.

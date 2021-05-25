@@ -245,9 +245,9 @@
     <Reference Include="System.EnterpriseServices">
       <HintPath>System.EnterpriseServices</HintPath>
     </Reference>
-    <ProjectReference Include="..\Objects\Flexberry.Audit.Tests.Objects.csproj">
-      <Project>{c631647f-3889-4d86-aac2-59de2e9ca3e6}</Project>
-      <Name>Flexberry.Audit.Tests.Objects</Name>
+    <ProjectReference Include="..\Objects\AuditTestSimple.Objects.csproj">
+      <Project>{9C5C8A2E-E534-40EF-A599-26EFCBFC9598}</Project>
+      <Name>AuditTestSimple.Objects</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

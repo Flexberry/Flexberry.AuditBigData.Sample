@@ -40,6 +40,11 @@ export default Controller.extend({
             caption: i18n.t('forms.application.sitemap.flexberry-audit-tests.audit-test-simple-class2-l.caption'),
             title: i18n.t('forms.application.sitemap.flexberry-audit-tests.audit-test-simple-class2-l.title'),
             children: null
+          },{
+            link: 'audit-test-simple-class3-l',
+            caption: i18n.t('forms.application.sitemap.flexberry-audit-tests.audit-test-simple-class3-l.caption'),
+            title: i18n.t('forms.application.sitemap.flexberry-audit-tests.audit-test-simple-class3-l.title'),
+            children: null
           }]
         }, {
 			link: null,

@@ -21,17 +21,17 @@ RUN \
 
 FROM mono:latest as backend
 
-COPY /src/AuditTestStand /src/AuditTestStand
+COPY /src/AuditTestSimple /src/AuditTestSimple
 
 RUN \
- cd /src/AuditTestStand ;\
- nuget restore AuditTestStand.sln; \
- msbuild /p:Configuration=Release AuditTestStand.sln
+ cd /src/AuditTestSimple ;\
+ nuget restore AuditTestSimple.sln; \
+ msbuild /p:Configuration=Release AuditTestSimple.sln
 
 FROM flexberry/alt.p8-apache2-mono:latest
 
 MAINTAINER mail@flexberry.net
 
-COPY --from=backend /src/AuditTestStand/ODataBackend /var/www/vhosts/project/
+COPY --from=backend /src/AuditTestSimple/ODataBackend /var/www/vhosts/project/
 COPY --from=ember_app /src/ember-app/dist /var/www/vhosts/project
 COPY /src/Docker/vhosts.conf /conf

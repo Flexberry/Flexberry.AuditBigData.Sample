@@ -3,9 +3,11 @@ import EmberFlexberryTranslations from 'ember-flexberry/locales/en/translations'
 
 import AuditTestSimpleClass1LForm from './forms/audit-test-simple-class1-l';
 import AuditTestSimpleClass2LForm from './forms/audit-test-simple-class2-l';
+import AuditTestSimpleClass3LForm from './forms/audit-test-simple-class3-l';
 import AuditTestSimpleClass4LForm from './forms/audit-test-simple-class4-l';
 import AuditTestSimpleClass1EForm from './forms/audit-test-simple-class1-e';
 import AuditTestSimpleClass2EForm from './forms/audit-test-simple-class2-e';
+import AuditTestSimpleClass3DForm from './forms/audit-test-simple-class3-d';
 import AuditTestSimpleClass4EForm from './forms/audit-test-simple-class4-e';
 import AuditTestSimpleClass1Model from './models/audit-test-simple-class1';
 import AuditTestSimpleClass2Model from './models/audit-test-simple-class2';
@@ -24,8 +26,6 @@ $.extend(true, translations, {
   },
 
   'application-name': 'Application caption',
-  
-
 
   forms: {
     loading: {
@@ -33,6 +33,43 @@ $.extend(true, translations, {
     },
     index: {
       greeting: 'Welcome to ember-flexberry test stand!'
+    },
+	
+	login: {
+      caption: 'Login',
+      logout: 'Logout',
+      back: 'Back',
+      login: 'Login',
+      password: 'Password',
+      'you-logged-as': 'You logged as: "{{login}}".',
+      errors: {
+        'empty-login': 'Login can not be empty.',
+        'empty-password': 'Password can not be empty.',
+        'server-error': 'Not response from server.',
+        'incorrect-auth-data': 'Wrong login or password.',
+        'login-please': 'Please, login.',
+        'unknown-error': 'Oh, something went wrong...',
+      },
+    },
+
+    'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-l': {
+      caption: 'Audit entities'
+    },
+
+    'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-e': {
+      caption: 'Audit entity',
+      'objectPrimaryKey-caption': 'Object Primary Key',
+      'operationTime-caption': 'Operation time',
+      'operationType-caption': 'Operation type',
+      'executionResult-caption': 'Execution result',
+      'source-caption': 'Source',
+      'createTime-caption': 'Create time',
+      'creator-caption': 'Creator',
+      'editTime-caption': 'Edit time',
+      'editor-caption': 'Editor',
+      'objectType-caption': 'Object type',
+      'user-caption': 'User',
+      'auditFields-caption': 'Audit fields'
     },
 
     application: {
@@ -103,46 +140,13 @@ $.extend(true, translations, {
           'audit-test-simple-class2-l': {
             caption: 'audit-test-simple-class2-l',
             title: 'audit-test-simple-class2-l'
+          },
+          'audit-test-simple-class3-l': {
+            caption: 'audit-test-simple-class3-l',
+            title: 'audit-test-simple-class3-l'
           }
         },
       }
-    },
-
-    login: {
-      caption: 'Login',
-      logout: 'Logout',
-      back: 'Back',
-      login: 'Login',
-      password: 'Password',
-      'you-logged-as': 'You logged as: "{{login}}".',
-      errors: {
-        'empty-login': 'Login can not be empty.',
-        'empty-password': 'Password can not be empty.',
-        'server-error': 'Not response from server.',
-        'incorrect-auth-data': 'Wrong login or password.',
-        'login-please': 'Please, login.',
-        'unknown-error': 'Oh, something went wrong...',
-      },
-    },
-
-    'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-l': {
-      caption: 'Audit entities'
-    },
-
-    'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-e': {
-      caption: 'Audit entity',
-      'objectPrimaryKey-caption': 'Object Primary Key',
-      'operationTime-caption': 'Operation time',
-      'operationType-caption': 'Operation type',
-      'executionResult-caption': 'Execution result',
-      'source-caption': 'Source',
-      'createTime-caption': 'Create time',
-      'creator-caption': 'Creator',
-      'editTime-caption': 'Edit time',
-      'editor-caption': 'Editor',
-      'objectType-caption': 'Object type',
-      'user-caption': 'User',
-      'auditFields-caption': 'Audit fields'
     },
 
     'edit-form': {
@@ -155,9 +159,11 @@ $.extend(true, translations, {
     },
     'audit-test-simple-class1-l': AuditTestSimpleClass1LForm,
     'audit-test-simple-class2-l': AuditTestSimpleClass2LForm,
+    'audit-test-simple-class3-l': AuditTestSimpleClass3LForm,
     'audit-test-simple-class4-l': AuditTestSimpleClass4LForm,
     'audit-test-simple-class1-e': AuditTestSimpleClass1EForm,
     'audit-test-simple-class2-e': AuditTestSimpleClass2EForm,
+    'audit-test-simple-class3-d': AuditTestSimpleClass3DForm,
     'audit-test-simple-class4-e': AuditTestSimpleClass4EForm,
   },
 

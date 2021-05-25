@@ -3,9 +3,11 @@ import EmberFlexberryTranslations from 'ember-flexberry/locales/ru/translations'
 
 import AuditTestSimpleClass1LForm from './forms/audit-test-simple-class1-l';
 import AuditTestSimpleClass2LForm from './forms/audit-test-simple-class2-l';
+import AuditTestSimpleClass3LForm from './forms/audit-test-simple-class3-l';
 import AuditTestSimpleClass4LForm from './forms/audit-test-simple-class4-l';
 import AuditTestSimpleClass1EForm from './forms/audit-test-simple-class1-e';
 import AuditTestSimpleClass2EForm from './forms/audit-test-simple-class2-e';
+import AuditTestSimpleClass3DForm from './forms/audit-test-simple-class3-d';
 import AuditTestSimpleClass4EForm from './forms/audit-test-simple-class4-e';
 import AuditTestSimpleClass1Model from './models/audit-test-simple-class1';
 import AuditTestSimpleClass2Model from './models/audit-test-simple-class2';
@@ -32,8 +34,8 @@ $.extend(true, translations, {
     index: {
       greeting: 'Добро пожаловать на тестовый стенд ember-flexberry!'
     },
-
-    login: {
+	
+	login: {
       caption: 'Login',
       logout: 'Logout',
       back: 'Back',
@@ -138,6 +140,10 @@ $.extend(true, translations, {
           'audit-test-simple-class2-l': {
             caption: 'Class2',
             title: ''
+          },
+          'audit-test-simple-class3-l': {
+            caption: 'Class3L',
+            title: ''
           }
         },
       }
@@ -153,9 +159,11 @@ $.extend(true, translations, {
     },
     'audit-test-simple-class1-l': AuditTestSimpleClass1LForm,
     'audit-test-simple-class2-l': AuditTestSimpleClass2LForm,
+    'audit-test-simple-class3-l': AuditTestSimpleClass3LForm,
     'audit-test-simple-class4-l': AuditTestSimpleClass4LForm,
     'audit-test-simple-class1-e': AuditTestSimpleClass1EForm,
     'audit-test-simple-class2-e': AuditTestSimpleClass2EForm,
+    'audit-test-simple-class3-d': AuditTestSimpleClass3DForm,
     'audit-test-simple-class4-e': AuditTestSimpleClass4EForm,
   },
 

@@ -100,13 +100,7 @@ export default {
         }
       },
       class3: {
-        __caption__: 'class3',
-        field31: {
-          __caption__: 'field31'
-        },
-        field32: {
-          __caption__: 'field32'
-        }
+        __caption__: 'class3'
       }
     },
     Class2L: {

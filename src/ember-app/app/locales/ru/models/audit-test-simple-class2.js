@@ -100,13 +100,7 @@ export default {
         }
       },
       class3: {
-        __caption__: 'Class3',
-        field31: {
-          __caption__: 'Поле31'
-        },
-        field32: {
-          __caption__: 'Поле32'
-        }
+        __caption__: 'Class3'
       }
     },
     Class2L: {

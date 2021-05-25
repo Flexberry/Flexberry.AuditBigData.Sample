@@ -35,12 +35,23 @@ export default {
         }
       }
     },
-    Class3E: {
+    Class3D: {
       field31: {
         __caption__: 'Поле31'
       },
       field32: {
         __caption__: 'Поле32'
+      },
+      class2: {
+        __caption__: ''
+      }
+    },
+    Class3L: {
+      field31: {
+        __caption__: ''
+      },
+      field32: {
+        __caption__: ''
       }
     }
   },

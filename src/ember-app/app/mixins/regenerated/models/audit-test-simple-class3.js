@@ -79,8 +79,16 @@ export let defineProjections = function (modelClass) {
     }, { index: 5 })
   });
 
-  modelClass.defineProjection('Class3E', 'audit-test-simple-class3', {
+  modelClass.defineProjection('Class3D', 'audit-test-simple-class3', {
     field31: attr('Поле31', { index: 0 }),
-    field32: attr('Поле32', { index: 1 })
+    field32: attr('Поле32', { index: 1 }),
+    class2: belongsTo('audit-test-simple-class2', '', {
+
+    }, { index: 2 })
+  });
+
+  modelClass.defineProjection('Class3L', 'audit-test-simple-class3', {
+    field31: attr('', { index: 0 }),
+    field32: attr('', { index: 1 })
   });
 };

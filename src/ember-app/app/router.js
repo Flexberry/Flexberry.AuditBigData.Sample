@@ -9,7 +9,7 @@ Router.map(function () {
   this.route('i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-l');
   this.route('i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-e',
     { path: 'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-e/:id' });
-
+	
   this.route('audit-test-simple-class1-l');
   this.route('audit-test-simple-class1-e',
   { path: 'audit-test-simple-class1-e/:id' });
@@ -20,6 +20,11 @@ Router.map(function () {
   { path: 'audit-test-simple-class2-e/:id' });
   this.route('audit-test-simple-class2-e.new',
   { path: 'audit-test-simple-class2-e/new' });
+  this.route('audit-test-simple-class3-l');
+  this.route('audit-test-simple-class3-d',
+  { path: 'audit-test-simple-class3-d/:id' });
+  this.route('audit-test-simple-class3-d.new',
+  { path: 'audit-test-simple-class3-d/new' });
   this.route('audit-test-simple-class4-l');
   this.route('audit-test-simple-class4-e',
   { path: 'audit-test-simple-class4-e/:id' });

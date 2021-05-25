@@ -1,1 +1,1 @@
-docker-compose -p auditteststand down
+docker-compose -p audittestsimple down

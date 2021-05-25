@@ -118,9 +118,6 @@
       readonly=readonly
       orderable=false
       class=(if (v-get validationObject "class3" "isInvalid") "error")
-      rowClickable=true
-      rowClick='rowClick'
-      editOnSeparateRoute=true
     }}
     {{flexberry-validationmessage error=(v-get validationObject "class3" "messages")}}
   </div>
