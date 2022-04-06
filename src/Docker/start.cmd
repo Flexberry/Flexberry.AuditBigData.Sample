@@ -1,1 +1,0 @@
-docker-compose -p audittestsimple up -d
