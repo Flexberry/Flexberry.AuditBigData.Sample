@@ -1,0 +1,145 @@
+<h3 class="ui header">{{t 'forms.audit-test-simple-class2-e.caption'}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=model.errors}}
+    </div>
+  </div>
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button type="submit" class="ui button save-button" {{action 'save'}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button type="submit" class="ui button save-del-button" {{action 'delete'}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button type="submit" class="ui button close-button" {{action 'close'}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+<div class="field">
+  {{flexberry-field
+    placeholder=(t "components.flexberry-field.placeholder")
+    readonly=readonly
+    required=true
+    value=model.field21
+    class=(if model.errors.field21 "error")
+    label=(t 'forms.audit-test-simple-class2-e.field21-caption')
+    data-test-audit-test-simple-class2-e-field21=true
+  }}
+  {{flexberry-validationmessage error=model.errors.field21 pointing="pointing"}}
+</div>
+<div class="field">
+  {{flexberry-field
+    placeholder=(t "components.flexberry-field.placeholder")
+    readonly=readonly
+    required=true
+    value=model.field22
+    class=(if model.errors.field22 "error")
+    label=(t 'forms.audit-test-simple-class2-e.field22-caption')
+    data-test-audit-test-simple-class2-e-field22=true
+  }}
+  {{flexberry-validationmessage error=model.errors.field22 pointing="pointing"}}
+</div>
+<div class="field">
+  <label>{{t 'forms.audit-test-simple-class2-e.class1-caption'}}</label>
+  {{flexberry-lookup
+    choose="showLookupDialog"
+    remove="removeLookupValue"
+    value=model.class1
+    
+    relationName="class1"
+    projection="Class1L"
+    title=(t 'forms.audit-test-simple-class2-e.class1-caption')
+    readonly=readonly
+    componentName="class1Lookup"
+    data-test-audit-test-simple-class2-e-class1=true
+  }}
+  {{flexberry-validationmessage error=model.errors.class1 pointing="pointing"}}
+</div>
+<div class="field">
+  {{flexberry-field
+    placeholder=(t "components.flexberry-field.placeholder")
+    readonly=true
+    required=true
+    value=model.class1.field11
+    class=(if model.errors.class1.field11 "error")
+    label=(t 'forms.audit-test-simple-class2-e.class1.field11-caption')
+    data-test-audit-test-simple-class2-e-class1-field11=true
+  }}
+  {{flexberry-validationmessage error=model.errors.class1.field11 pointing="pointing"}}
+</div>
+<div class="field">
+  {{flexberry-field
+    placeholder=(t "components.flexberry-field.placeholder")
+    readonly=true
+    required=true
+    value=model.class1.field12
+    class=(if model.errors.class1.field12 "error")
+    label=(t 'forms.audit-test-simple-class2-e.class1.field12-caption')
+    data-test-audit-test-simple-class2-e-class1-field12=true
+  }}
+  {{flexberry-validationmessage error=model.errors.class1.field12 pointing="pointing"}}
+</div>
+<div class="field">
+  <label>{{t 'forms.audit-test-simple-class2-e.class4-caption'}}</label>
+  {{flexberry-lookup
+    choose="showLookupDialog"
+    remove="removeLookupValue"
+    value=model.class4
+    
+    relationName="class4"
+    projection="Class4L"
+    title=(t 'forms.audit-test-simple-class2-e.class4-caption')
+    readonly=readonly
+    componentName="class4Lookup"
+    data-test-audit-test-simple-class2-e-class4=true
+  }}
+  {{flexberry-validationmessage error=model.errors.class4 pointing="pointing"}}
+</div>
+<div class="field">
+  {{flexberry-field
+    placeholder=(t "components.flexberry-field.placeholder")
+    readonly=true
+    required=true
+    value=model.class4.field41
+    class=(if model.errors.class4.field41 "error")
+    label=(t 'forms.audit-test-simple-class2-e.class4.field41-caption')
+    data-test-audit-test-simple-class2-e-class4-field41=true
+  }}
+  {{flexberry-validationmessage error=model.errors.class4.field41 pointing="pointing"}}
+</div>
+<div class="field">
+  {{flexberry-field
+    placeholder=(t "components.flexberry-field.placeholder")
+    readonly=true
+    required=true
+    value=model.class4.field42
+    class=(if model.errors.class4.field42 "error")
+    label=(t 'forms.audit-test-simple-class2-e.class4.field42-caption')
+    data-test-audit-test-simple-class2-e-class4-field42=true
+  }}
+  {{flexberry-validationmessage error=model.errors.class4.field42 pointing="pointing"}}
+</div>
+<div class="field">
+  <label>{{t 'forms.audit-test-simple-class2-e.class3-caption'}}</label>
+  {{flexberry-groupedit
+    componentName="class3GroupEdit"
+    mainModelProjection=modelProjection
+    modelProjection=modelProjection.attributes.class3
+    content=model.class3
+    readonly=readonly
+    orderable=false
+    class=(if model.errors.class3 "error")
+    data-test-audit-test-simple-class2-e-class3=true
+  }}
+  {{flexberry-validationmessage error=model.errors.class3 pointing="pointing"}}
+</div>
+</form>

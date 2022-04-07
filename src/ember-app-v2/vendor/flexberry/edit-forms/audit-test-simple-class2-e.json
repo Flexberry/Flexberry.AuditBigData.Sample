@@ -1,0 +1,31 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Class1",
+      "projection": "Class1L",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Class4",
+      "projection": "Class4L",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Class2",
+  "name": "AuditTestSimpleClass2E",
+  "className": "Class2E",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "audit-test-simple-class2",
+      "modelProjection": "Class2E"
+    }
+  ]
+}
