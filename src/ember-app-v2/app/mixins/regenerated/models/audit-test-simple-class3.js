@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import DS from 'ember-data';
-import { attr, belongsTo, hasMany } from 'ember-flexberry-data/utils/attributes';
+import { attr, belongsTo } from 'ember-flexberry-data/utils/attributes';
 
 export let Model = Ember.Mixin.create({
   field31: DS.attr('string'),
