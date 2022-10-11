@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import EmberFlexberryTranslations from 'ember-flexberry/locales/en/translations';
+import EmberFlexberrySecurityTranslations from 'ember-flexberry-security/locales/en/translations';
 
 import AuditTestSimpleClass1LForm from './forms/audit-test-simple-class1-l';
 import AuditTestSimpleClass2LForm from './forms/audit-test-simple-class2-l';
@@ -16,6 +17,7 @@ import AuditTestSimpleClass4Model from './models/audit-test-simple-class4';
 
 const translations = {};
 $.extend(true, translations, EmberFlexberryTranslations);
+$.extend(true, translations, EmberFlexberrySecurityTranslations);
 
 $.extend(true, translations, {
   models: {
@@ -146,6 +148,18 @@ $.extend(true, translations, {
             title: 'audit-test-simple-class3-l'
           }
         },
+        'audit-forms': {
+          caption: 'Audit forms',
+          title: 'Audit forms',
+          'audit-forms-data': {
+            caption: 'Audit data',
+            title: 'Audit data'
+          },
+          'new-platform-flexberry-audit-big-data-audit-record-l': {
+            caption: 'Audit records',
+            title: 'Audit records'
+          }
+        }
       }
     },
 

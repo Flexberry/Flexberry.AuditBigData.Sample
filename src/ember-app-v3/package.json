@@ -17,13 +17,14 @@
     "test": "ember test"
   },
   "devDependencies": {
+    "autoprefixer": "^6.3.1",
     "broccoli-asset-rev": "^2.4.5",
     "dexie": "^2.0.2",
     "ember-ajax": "^3.0.0",
     "ember-block-slots": "1.1.11",
-    "ember-browserify": "1.1.9",
+    "ember-browserify": "1.2.0",
     "ember-cli": "~3.1.4",
-    "ember-cli-app-version": "^3.0.0",
+    "ember-cli-app-version": "^3.1.0",
     "ember-cli-babel": "^6.6.0",
     "ember-cli-dependency-checker": "^2.0.0",
     "ember-cli-eslint": "^4.2.1",
@@ -39,7 +40,8 @@
     "ember-cp-validations": "~3.5.2",
     "ember-data": "~3.1.1",
     "ember-export-application-global": "^2.0.0",
-    "ember-flexberry": "3.1.0",
+    "ember-flexberry": "~3.7.0-beta.1",
+    "ember-flexberry-themes": "0.1.0-beta.10",
     "ember-link-action": "0.0.36",
     "ember-load-initializers": "^1.0.0",
     "ember-maybe-import-regenerator": "^0.1.6",
@@ -56,10 +58,10 @@
     "node": "^4.5 || 6.* || >= 7.*"
   },
   "dependencies": {
-    "ember-flexberry-security": "^3.0.0-beta.2"
+    "ember-flexberry-security": "~3.6.1-beta.2"
   },
   "resolutions": {
     "ember-get-config": "0.3.0",
-	"lru-cache": "4.1.5"
+    "lru-cache": "4.1.5"
   }
 }

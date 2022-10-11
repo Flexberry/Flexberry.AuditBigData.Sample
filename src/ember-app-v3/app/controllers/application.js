@@ -10,8 +10,7 @@ export default Controller.extend({
     let i18n = this.get('i18n');
 
     return {
-      nodes: [
-        {
+      nodes: [{
           link: 'index',
           caption: i18n.t('forms.application.sitemap.index.caption'),
           title: i18n.t('forms.application.sitemap.index.title'),
@@ -21,38 +20,44 @@ export default Controller.extend({
           caption: i18n.t('forms.application.sitemap.flexberry-audit-tests.caption'),
           title: i18n.t('forms.application.sitemap.flexberry-audit-tests.title'),
           children: [{
-            link: 'audit-test-simple-class4-l',
-            caption: i18n.t('forms.application.sitemap.flexberry-audit-tests.audit-test-simple-class4-l.caption'),
-            title: i18n.t('forms.application.sitemap.flexberry-audit-tests.audit-test-simple-class4-l.title'),
+              link: 'audit-test-simple-class4-l',
+              caption: i18n.t('forms.application.sitemap.flexberry-audit-tests.audit-test-simple-class4-l.caption'),
+              title: i18n.t('forms.application.sitemap.flexberry-audit-tests.audit-test-simple-class4-l.title'),
+              children: null
+            }, {
+              link: 'audit-test-simple-class1-l',
+              caption: i18n.t('forms.application.sitemap.flexberry-audit-tests.audit-test-simple-class1-l.caption'),
+              title: i18n.t('forms.application.sitemap.flexberry-audit-tests.audit-test-simple-class1-l.title'),
+              children: null
+            }, {
+              link: 'audit-test-simple-class2-l',
+              caption: i18n.t('forms.application.sitemap.flexberry-audit-tests.audit-test-simple-class2-l.caption'),
+              title: i18n.t('forms.application.sitemap.flexberry-audit-tests.audit-test-simple-class2-l.title'),
+              children: null
+            },{
+              link: 'audit-test-simple-class3-l',
+              caption: i18n.t('forms.application.sitemap.flexberry-audit-tests.audit-test-simple-class3-l.caption'),
+              title: i18n.t('forms.application.sitemap.flexberry-audit-tests.audit-test-simple-class3-l.title'),
+              children: null
+            }
+          ]
+        }, {
+          link: null,
+          icon: 'list',
+          caption: i18n.t('forms.application.sitemap.audit-forms.caption'),
+          title: i18n.t('forms.application.sitemap.audit-forms.title'),
+          children: [{
+            link: 'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-l',
+            caption: i18n.t('forms.application.sitemap.audit-forms.audit-forms-data.caption'),
+            title: i18n.t('forms.application.sitemap.audit-forms.audit-forms-data.title'),
             children: null
           }, {
-            link: 'audit-test-simple-class1-l',
-            caption: i18n.t('forms.application.sitemap.flexberry-audit-tests.audit-test-simple-class1-l.caption'),
-            title: i18n.t('forms.application.sitemap.flexberry-audit-tests.audit-test-simple-class1-l.title'),
-            children: null
-          }, {
-            link: 'audit-test-simple-class2-l',
-            caption: i18n.t('forms.application.sitemap.flexberry-audit-tests.audit-test-simple-class2-l.caption'),
-            title: i18n.t('forms.application.sitemap.flexberry-audit-tests.audit-test-simple-class2-l.title'),
-            children: null
-          },{
-            link: 'audit-test-simple-class3-l',
-            caption: i18n.t('forms.application.sitemap.flexberry-audit-tests.audit-test-simple-class3-l.caption'),
-            title: i18n.t('forms.application.sitemap.flexberry-audit-tests.audit-test-simple-class3-l.title'),
+            link: 'new-platform-flexberry-audit-big-data-audit-record-l',
+            caption: i18n.t('forms.application.sitemap.audit-forms.new-platform-flexberry-audit-big-data-audit-record-l.caption'),
+            title: i18n.t('forms.application.sitemap.audit-forms.new-platform-flexberry-audit-big-data-audit-record-l.title'),
             children: null
           }]
-        }, {
-			link: null,
-			icon: 'list',
-			caption: i18n.t('forms.application.sitemap.audit-forms.caption'),
-			title: i18n.t('forms.application.sitemap.audit-forms.title'),
-			children: [{
-				link: 'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-l',
-				caption: i18n.t('forms.application.sitemap.audit-forms.audit-forms-data.caption'),
-				title: i18n.t('forms.application.sitemap.audit-forms.audit-forms-data.title'),
-				children: null
-			}]
-		}
+        }
       ]
     };
   }),

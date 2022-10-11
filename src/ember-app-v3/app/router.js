@@ -30,6 +30,12 @@ Router.map(function () {
   { path: 'audit-test-simple-class4-e/:id' });
   this.route('audit-test-simple-class4-e.new',
   { path: 'audit-test-simple-class4-e/new' });
+
+  this.route('new-platform-flexberry-audit-big-data-audit-record-l');
+  this.route('new-platform-flexberry-audit-big-data-audit-record-e',
+  { path: 'new-platform-flexberry-audit-big-data-audit-record-e/:id' });
+  this.route('new-platform-flexberry-audit-big-data-audit-record-e.new',
+  { path: 'new-platform-flexberry-audit-big-data-audit-record-e/new' });
 });
 
 export default Router;
