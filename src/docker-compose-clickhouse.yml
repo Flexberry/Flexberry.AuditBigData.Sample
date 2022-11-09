@@ -1,0 +1,32 @@
+version: '3'
+services:
+    main-backend:
+        image: "auditbigdatatest/main-backend:latest"
+        ports:
+        - 6500:80
+        
+    clickhouse-audit-odata-backend:
+        image: "auditbigdatatest/clickhouse-audit-odata-backend:latest"
+        ports:
+        - 6505:80
+    
+    clickhouse-db:
+        image: auditbigdatatest/clickhouse
+        command: gosu clickhouse:clickhouse sh -c ' while :; do /usr/bin/clickhouse-server --config-file=/etc/clickhouse-server/config.xml; sleep 1; done'
+        volumes:
+        - clickhousedb:/var/lib/clickhouse
+
+        ports:
+        - 8123:8123
+        - 9000:9000
+      
+    postgres-db:
+        image: auditbigdatatest/postgres
+        volumes:
+        - DB:/var/lib/pgsql/data/
+        ports:
+        - 5432:5432
+
+volumes:
+  clickhousedb:
+  DB:

@@ -57,37 +57,37 @@
       <HintPath>..\packages\SharpZipLib.1.2.0\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
     <Reference Include="ICSSoft.STORMNET.Business, Version=1.0.0.1, Culture=neutral, PublicKeyToken=c17bb360f7843f45, processorArchitecture=MSIL">
-      <HintPath>..\packages\NewPlatform.Flexberry.ORM.6.0.1-beta06\lib\net45\ICSSoft.STORMNET.Business.dll</HintPath>
+      <HintPath>..\packages\NewPlatform.Flexberry.ORM.6.1.0-beta01\lib\net45\ICSSoft.STORMNET.Business.dll</HintPath>
     </Reference>
     <Reference Include="ICSSoft.STORMNET.Business.Audit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8b09038b5bd09732, processorArchitecture=MSIL">
-      <HintPath>..\packages\NewPlatform.Flexberry.Audit.4.0.0\lib\net45\ICSSoft.STORMNET.Business.Audit.dll</HintPath>
+      <HintPath>..\packages\NewPlatform.Flexberry.Audit.4.1.0-beta01\lib\net45\ICSSoft.STORMNET.Business.Audit.dll</HintPath>
     </Reference>
     <Reference Include="ICSSoft.STORMNET.Business.ExternalLangDef, Version=1.0.0.0, Culture=neutral, PublicKeyToken=50dc27591ed591e6, processorArchitecture=MSIL">
-      <HintPath>..\packages\NewPlatform.Flexberry.ORM.6.0.1-beta06\lib\net45\ICSSoft.STORMNET.Business.ExternalLangDef.dll</HintPath>
+      <HintPath>..\packages\NewPlatform.Flexberry.ORM.6.1.0-beta01\lib\net45\ICSSoft.STORMNET.Business.ExternalLangDef.dll</HintPath>
     </Reference>
     <Reference Include="ICSSoft.STORMNET.Business.LINQProvider, Version=1.0.0.0, Culture=neutral, PublicKeyToken=68e48bb6f6293778, processorArchitecture=MSIL">
-      <HintPath>..\packages\NewPlatform.Flexberry.ORM.6.0.1-beta06\lib\net45\ICSSoft.STORMNET.Business.LINQProvider.dll</HintPath>
+      <HintPath>..\packages\NewPlatform.Flexberry.ORM.6.1.0-beta01\lib\net45\ICSSoft.STORMNET.Business.LINQProvider.dll</HintPath>
     </Reference>
     <Reference Include="ICSSoft.STORMNET.Business.LockService, Version=1.0.0.1, Culture=neutral, PublicKeyToken=68ac0e47b5ef94d8, processorArchitecture=MSIL">
-      <HintPath>..\packages\NewPlatform.Flexberry.ORM.6.0.1-beta06\lib\net45\ICSSoft.STORMNET.Business.LockService.dll</HintPath>
+      <HintPath>..\packages\NewPlatform.Flexberry.ORM.6.1.0-beta01\lib\net45\ICSSoft.STORMNET.Business.LockService.dll</HintPath>
     </Reference>
     <Reference Include="ICSSoft.STORMNET.Business.PostgresDataService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c1da4b21bda90afe, processorArchitecture=MSIL">
       <HintPath>..\packages\NewPlatform.Flexberry.ORM.PostgresDataService.6.1.0-beta03\lib\net45\ICSSoft.STORMNET.Business.PostgresDataService.dll</HintPath>
     </Reference>
     <Reference Include="ICSSoft.STORMNET.Collections, Version=1.0.0.1, Culture=neutral, PublicKeyToken=898f36b7a907d804, processorArchitecture=MSIL">
-      <HintPath>..\packages\NewPlatform.Flexberry.ORM.6.0.1-beta06\lib\net45\ICSSoft.STORMNET.Collections.dll</HintPath>
+      <HintPath>..\packages\NewPlatform.Flexberry.ORM.6.1.0-beta01\lib\net45\ICSSoft.STORMNET.Collections.dll</HintPath>
     </Reference>
     <Reference Include="ICSSoft.STORMNET.DataObject, Version=1.0.0.1, Culture=neutral, PublicKeyToken=023a90c13b0ca8dc, processorArchitecture=MSIL">
-      <HintPath>..\packages\NewPlatform.Flexberry.ORM.6.0.1-beta06\lib\net45\ICSSoft.STORMNET.DataObject.dll</HintPath>
+      <HintPath>..\packages\NewPlatform.Flexberry.ORM.6.1.0-beta01\lib\net45\ICSSoft.STORMNET.DataObject.dll</HintPath>
     </Reference>
     <Reference Include="ICSSoft.STORMNET.FunctionalLanguage, Version=1.0.0.1, Culture=neutral, PublicKeyToken=88efc6f76e5cd161, processorArchitecture=MSIL">
-      <HintPath>..\packages\NewPlatform.Flexberry.ORM.6.0.1-beta06\lib\net45\ICSSoft.STORMNET.FunctionalLanguage.dll</HintPath>
+      <HintPath>..\packages\NewPlatform.Flexberry.ORM.6.1.0-beta01\lib\net45\ICSSoft.STORMNET.FunctionalLanguage.dll</HintPath>
     </Reference>
     <Reference Include="ICSSoft.STORMNET.Tools, Version=1.0.0.1, Culture=neutral, PublicKeyToken=c824f5305b237be9, processorArchitecture=MSIL">
-      <HintPath>..\packages\NewPlatform.Flexberry.ORM.6.0.1-beta06\lib\net45\ICSSoft.STORMNET.Tools.dll</HintPath>
+      <HintPath>..\packages\NewPlatform.Flexberry.ORM.6.1.0-beta01\lib\net45\ICSSoft.STORMNET.Tools.dll</HintPath>
     </Reference>
     <Reference Include="ICSSoft.STORMNET.UserDataTypes, Version=1.0.0.1, Culture=neutral, PublicKeyToken=bc478021255def29, processorArchitecture=MSIL">
-      <HintPath>..\packages\NewPlatform.Flexberry.ORM.6.0.1-beta06\lib\net45\ICSSoft.STORMNET.UserDataTypes.dll</HintPath>
+      <HintPath>..\packages\NewPlatform.Flexberry.ORM.6.1.0-beta01\lib\net45\ICSSoft.STORMNET.UserDataTypes.dll</HintPath>
     </Reference>
     <Reference Include="IIS.Caseberry.Logging.BusinessServers, Version=1.0.0.1, Culture=neutral, PublicKeyToken=2064285e6f5eb4a5, processorArchitecture=MSIL">
       <HintPath>..\packages\NewPlatform.Flexberry.LogService.Objects.4.0.0\lib\net45\IIS.Caseberry.Logging.BusinessServers.dll</HintPath>
@@ -120,19 +120,19 @@
       <HintPath>..\packages\Microsoft.Spatial.7.7.2\lib\net45\Microsoft.Spatial.dll</HintPath>
     </Reference>
     <Reference Include="NewPlatform.Flexberry.AuditBigData, Version=1.0.0.1, Culture=neutral, PublicKeyToken=2ad91c29494c1b52, processorArchitecture=MSIL">
-      <HintPath>..\packages\NewPlatform.Flexberry.AuditBigData.1.0.0-rc02\lib\net45\NewPlatform.Flexberry.AuditBigData.dll</HintPath>
+      <HintPath>..\packages\NewPlatform.Flexberry.AuditBigData.1.0.0-rc03\lib\net45\NewPlatform.Flexberry.AuditBigData.dll</HintPath>
     </Reference>
     <Reference Include="NewPlatform.Flexberry.AuditBigData.Abstractions, Version=1.0.0.1, Culture=neutral, PublicKeyToken=2ad91c29494c1b52, processorArchitecture=MSIL">
-      <HintPath>..\packages\NewPlatform.Flexberry.AuditBigData.Abstractions.1.0.0-rc02\lib\net45\NewPlatform.Flexberry.AuditBigData.Abstractions.dll</HintPath>
+      <HintPath>..\packages\NewPlatform.Flexberry.AuditBigData.Abstractions.1.0.0-rc03\lib\net45\NewPlatform.Flexberry.AuditBigData.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="NewPlatform.Flexberry.AuditBigData.Objects, Version=1.0.0.1, Culture=neutral, PublicKeyToken=2ad91c29494c1b52, processorArchitecture=MSIL">
-      <HintPath>..\packages\NewPlatform.Flexberry.AuditBigData.Objects.1.0.0-rc02\lib\net45\NewPlatform.Flexberry.AuditBigData.Objects.dll</HintPath>
+      <HintPath>..\packages\NewPlatform.Flexberry.AuditBigData.Objects.1.0.0-rc03\lib\net45\NewPlatform.Flexberry.AuditBigData.Objects.dll</HintPath>
     </Reference>
     <Reference Include="NewPlatform.Flexberry.AuditBigData.Serialization.Abstractions, Version=1.0.0.1, Culture=neutral, PublicKeyToken=2ad91c29494c1b52, processorArchitecture=MSIL">
-      <HintPath>..\packages\NewPlatform.Flexberry.AuditBigData.Serialization.Abstractions.1.0.0-rc02\lib\net45\NewPlatform.Flexberry.AuditBigData.Serialization.Abstractions.dll</HintPath>
+      <HintPath>..\packages\NewPlatform.Flexberry.AuditBigData.Serialization.Abstractions.1.0.0-rc03\lib\net45\NewPlatform.Flexberry.AuditBigData.Serialization.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="NewPlatform.Flexberry.AuditBigData.Serialization.Json, Version=1.0.0.1, Culture=neutral, PublicKeyToken=2ad91c29494c1b52, processorArchitecture=MSIL">
-      <HintPath>..\packages\NewPlatform.Flexberry.AuditBigData.Serialization.Json.1.0.0-rc02\lib\net45\NewPlatform.Flexberry.AuditBigData.Serialization.Json.dll</HintPath>
+      <HintPath>..\packages\NewPlatform.Flexberry.AuditBigData.Serialization.Json.1.0.0-rc03\lib\net45\NewPlatform.Flexberry.AuditBigData.Serialization.Json.dll</HintPath>
     </Reference>
     <Reference Include="NewPlatform.Flexberry.Caching, Version=1.0.0.0, Culture=neutral, PublicKeyToken=43b437d0302b56ae, processorArchitecture=MSIL">
       <HintPath>..\packages\NewPlatform.Flexberry.Caching.2.0.0\lib\net45\NewPlatform.Flexberry.Caching.dll</HintPath>
@@ -147,7 +147,7 @@
       <HintPath>..\packages\NewPlatform.Flexberry.ORM.ClickHouseDataService.6.0.0-beta01\lib\net45\NewPlatform.Flexberry.ORM.ClickHouseDataService.dll</HintPath>
     </Reference>
     <Reference Include="NewPlatform.Flexberry.ORM.CurrentUserService, Version=1.0.0.1, Culture=neutral, PublicKeyToken=087bc7ccdc1b0bb4, processorArchitecture=MSIL">
-      <HintPath>..\packages\NewPlatform.Flexberry.ORM.6.0.1-beta06\lib\net45\NewPlatform.Flexberry.ORM.CurrentUserService.dll</HintPath>
+      <HintPath>..\packages\NewPlatform.Flexberry.ORM.6.1.0-beta01\lib\net45\NewPlatform.Flexberry.ORM.CurrentUserService.dll</HintPath>
     </Reference>
     <Reference Include="NewPlatform.Flexberry.ORM.ODataService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=11027c24ff789609, processorArchitecture=MSIL">
       <HintPath>..\packages\NewPlatform.Flexberry.ORM.ODataService.6.1.0\lib\net45\NewPlatform.Flexberry.ORM.ODataService.dll</HintPath>
@@ -159,7 +159,7 @@
       <HintPath>..\packages\NewPlatform.Flexberry.ORM.ODataService.6.1.0\lib\net45\NewPlatform.Flexberry.ORM.ODataService.WebApi.dll</HintPath>
     </Reference>
     <Reference Include="NewPlatform.Flexberry.ORM.UnityFactory, Version=1.0.0.1, Culture=neutral, PublicKeyToken=6389c2e26f4059bc, processorArchitecture=MSIL">
-      <HintPath>..\packages\NewPlatform.Flexberry.ORM.6.0.1-beta06\lib\net45\NewPlatform.Flexberry.ORM.UnityFactory.dll</HintPath>
+      <HintPath>..\packages\NewPlatform.Flexberry.ORM.6.1.0-beta01\lib\net45\NewPlatform.Flexberry.ORM.UnityFactory.dll</HintPath>
     </Reference>
     <Reference Include="NewPlatform.Flexberry.Security, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b04c483e14c0d306, processorArchitecture=MSIL">
       <HintPath>..\packages\NewPlatform.Flexberry.Security.3.0.1-beta02\lib\net45\NewPlatform.Flexberry.Security.dll</HintPath>

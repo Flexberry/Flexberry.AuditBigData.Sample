@@ -4,9 +4,9 @@ services:
         image: "auditbigdatatest/main-backend:latest"
         ports:
         - 6500:80
-            
-    clickhouse-odata-backend:
-        image: "auditbigdatatest/clickhouse-odata-backend:latest"
+        
+    postgres-audit-odata-backend:
+        image: "auditbigdatatest/postgres-audit-odata-backend:latest"
         ports:
         - 6505:80
     

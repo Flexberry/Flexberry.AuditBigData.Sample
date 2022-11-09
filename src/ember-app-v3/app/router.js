@@ -6,9 +6,9 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function () {
-  this.route('i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-l');
-  this.route('i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-e',
-    { path: 'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-e/:id' });
+  this.route('new-platform-flexberry-audit-big-data-audit-record-l');
+  this.route('new-platform-flexberry-audit-big-data-audit-record-e',
+    { path: 'new-platform-flexberry-audit-big-data-audit-record-e/:id' });
 	
   this.route('audit-test-simple-class1-l');
   this.route('audit-test-simple-class1-e',
