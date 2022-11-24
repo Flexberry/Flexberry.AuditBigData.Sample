@@ -20,6 +20,11 @@
 	или
 	run-postgres-backend
 	
+3) Если выбран clickhouse, то после запуска контейнера auditbigdatatest/clickhouse нужно зайти в его терминал и вручную выполнить команду
+
+clickhouse-client --host clickhouse-db --user default --password P@ssw0rd --multiquery < /var/clickhouse/schema/CreateAuditTables.sql
+
+	
 Для остановки контейнеров использовать stop-backend.cmd
 
 
