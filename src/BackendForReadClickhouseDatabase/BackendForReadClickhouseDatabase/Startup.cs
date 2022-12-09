@@ -14,6 +14,7 @@ namespace BackendForReadClickhouseDatabase
     using Microsoft.Extensions.Hosting;
     using NewPlatform.Flexberry.AuditBigData;
     using NewPlatform.Flexberry.Caching;
+    using NewPlatform.Flexberry.ORM;
     using NewPlatform.Flexberry.ORM.ODataService.Extensions;
     using NewPlatform.Flexberry.ORM.ODataService.Files;
     using NewPlatform.Flexberry.ORM.ODataService.Model;
@@ -82,7 +83,7 @@ namespace BackendForReadClickhouseDatabase
 
             // Регистрируем основной DataService.
             string mainConnectionString = Configuration.GetConnectionString("AuditConnString");
-            IDataService mainDataService = new ClickHouseDataService(emptySecurityManager)
+            IDataService mainDataService = new ClickHouseDataService()
             {
                 CustomizationString = mainConnectionString
             };
