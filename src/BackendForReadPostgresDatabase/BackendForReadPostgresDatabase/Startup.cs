@@ -11,14 +11,11 @@ namespace BackendForReadPostgresDatabase
     using Microsoft.AspNetCore.HttpOverrides;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
-    using Microsoft.Extensions.Hosting;
     using NewPlatform.Flexberry.AuditBigData;
-    using NewPlatform.Flexberry.Caching;
     using NewPlatform.Flexberry.ORM.ODataService.Extensions;
     using NewPlatform.Flexberry.ORM.ODataService.Files;
     using NewPlatform.Flexberry.ORM.ODataService.Model;
     using NewPlatform.Flexberry.ORM.ODataServiceCore.Common.Exceptions;
-    using NewPlatform.Flexberry.Services;
     using Unity;
 
     /// <summary>
