@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AuditTestSimple
+namespace Flexberry.Sample.AuditBigData
 {
     using System;
     using System.Xml;
@@ -31,24 +31,15 @@ namespace AuditTestSimple
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
     [View("AuditView", new string[] {
-            "Field32",
-            "CreateTime",
-            "Creator",
-            "EditTime",
-            "Editor",
-            "Class2",
-            "Class2.Field21",
-            "Class2.Field22",
-            "Class2.Class1",
-            "Class2.Class1.Field11",
-            "Class2.Class1.Field12"})]
-    [View("Class3D", new string[] {
-            "Field31 as \'Поле31\'",
-            "Field32 as \'Поле32\'",
-            "Class2"})]
-    [View("Class3L", new string[] {
-            "Field31",
-            "Field32"})]
+            "Field31 as \'Field31\'",
+            "Field32 as \'Field32\'",
+            "CreateTime as \'Create time\'",
+            "Creator as \'Creator\'",
+            "EditTime as \'Edit time\'",
+            "Editor as \'Editor\'"})]
+    [View("Class3E", new string[] {
+            "Field31 as \'Field31\'",
+            "Field32 as \'Field32\'"})]
     public class Class3 : ICSSoft.STORMNET.DataObject, IDataObjectWithAuditFields
     {
         
@@ -64,7 +55,7 @@ namespace AuditTestSimple
         
         private string fEditor;
         
-        private AuditTestSimple.Class2 fClass2;
+        private Flexberry.Sample.AuditBigData.Class2 fClass2;
         
         // *** Start programmer edit section *** (Class3 CustomMembers)
 
@@ -136,7 +127,7 @@ namespace AuditTestSimple
         }
         
         /// <summary>
-        /// Время создания объекта.
+        /// CreateTime.
         /// </summary>
         // *** Start programmer edit section *** (Class3.CreateTime CustomAttributes)
 
@@ -167,7 +158,7 @@ namespace AuditTestSimple
         }
         
         /// <summary>
-        /// Создатель объекта.
+        /// Creator.
         /// </summary>
         // *** Start programmer edit section *** (Class3.Creator CustomAttributes)
 
@@ -199,7 +190,7 @@ namespace AuditTestSimple
         }
         
         /// <summary>
-        /// Время последнего редактирования объекта.
+        /// EditTime.
         /// </summary>
         // *** Start programmer edit section *** (Class3.EditTime CustomAttributes)
 
@@ -230,7 +221,7 @@ namespace AuditTestSimple
         }
         
         /// <summary>
-        /// Последний редактор объекта.
+        /// Editor.
         /// </summary>
         // *** Start programmer edit section *** (Class3.Editor CustomAttributes)
 
@@ -262,23 +253,21 @@ namespace AuditTestSimple
         }
         
         /// <summary>
-        /// мастеровая ссылка на шапку AuditTestSimple.Class2.
+        /// мастеровая ссылка на шапку Flexberry.Sample.AuditBigData.Class2.
         /// </summary>
         // *** Start programmer edit section *** (Class3.Class2 CustomAttributes)
 
         // *** End programmer edit section *** (Class3.Class2 CustomAttributes)
         [Agregator()]
         [NotNull()]
-        [PropertyStorage(new string[] {
-                "Class2"})]
-        public virtual AuditTestSimple.Class2 Class2
+        public virtual Flexberry.Sample.AuditBigData.Class2 Class2
         {
             get
             {
                 // *** Start programmer edit section *** (Class3.Class2 Get start)
 
                 // *** End programmer edit section *** (Class3.Class2 Get start)
-                AuditTestSimple.Class2 result = this.fClass2;
+                Flexberry.Sample.AuditBigData.Class2 result = this.fClass2;
                 // *** Start programmer edit section *** (Class3.Class2 Get end)
 
                 // *** End programmer edit section *** (Class3.Class2 Get end)
@@ -309,29 +298,18 @@ namespace AuditTestSimple
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("AuditView", typeof(AuditTestSimple.Class3));
+                    return ICSSoft.STORMNET.Information.GetView("AuditView", typeof(Flexberry.Sample.AuditBigData.Class3));
                 }
             }
             
             /// <summary>
-            /// "Class3D" view.
+            /// "Class3E" view.
             /// </summary>
-            public static ICSSoft.STORMNET.View Class3D
+            public static ICSSoft.STORMNET.View Class3E
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("Class3D", typeof(AuditTestSimple.Class3));
-                }
-            }
-            
-            /// <summary>
-            /// "Class3L" view.
-            /// </summary>
-            public static ICSSoft.STORMNET.View Class3L
-            {
-                get
-                {
-                    return ICSSoft.STORMNET.Information.GetView("Class3L", typeof(AuditTestSimple.Class3));
+                    return ICSSoft.STORMNET.Information.GetView("Class3E", typeof(Flexberry.Sample.AuditBigData.Class3));
                 }
             }
         }
@@ -375,7 +353,7 @@ namespace AuditTestSimple
             /// <summary>
             /// Включён ли аудит операции изменения.
             /// </summary>
-            public static bool UpdateAudit = true;
+            public static bool UpdateAudit = false;
             
             /// <summary>
             /// Имя представления для аудирования операции изменения.
@@ -438,9 +416,9 @@ namespace AuditTestSimple
     public class DetailArrayOfClass3 : ICSSoft.STORMNET.DetailArray
     {
         
-        // *** Start programmer edit section *** (AuditTestSimple.DetailArrayOfClass3 members)
+        // *** Start programmer edit section *** (Flexberry.Sample.AuditBigData.DetailArrayOfClass3 members)
 
-        // *** End programmer edit section *** (AuditTestSimple.DetailArrayOfClass3 members)
+        // *** End programmer edit section *** (Flexberry.Sample.AuditBigData.DetailArrayOfClass3 members)
 
         
         /// <summary>
@@ -452,20 +430,20 @@ namespace AuditTestSimple
         /// <summary>
         /// Adds object with type Class3.
         /// </summary>
-        public DetailArrayOfClass3(AuditTestSimple.Class2 fClass2) : 
+        public DetailArrayOfClass3(Flexberry.Sample.AuditBigData.Class2 fClass2) : 
                 base(typeof(Class3), ((ICSSoft.STORMNET.DataObject)(fClass2)))
         {
         }
         
-        public AuditTestSimple.Class3 this[int index]
+        public Flexberry.Sample.AuditBigData.Class3 this[int index]
         {
             get
             {
-                return ((AuditTestSimple.Class3)(this.ItemByIndex(index)));
+                return ((Flexberry.Sample.AuditBigData.Class3)(this.ItemByIndex(index)));
             }
         }
         
-        public virtual void Add(AuditTestSimple.Class3 dataobject)
+        public virtual void Add(Flexberry.Sample.AuditBigData.Class3 dataobject)
         {
             this.AddObject(((ICSSoft.STORMNET.DataObject)(dataobject)));
         }
