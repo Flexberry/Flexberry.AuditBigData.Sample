@@ -1,0 +1,345 @@
+﻿{
+  "name": "FlexberrySampleAuditBigDataClass2",
+  "modelName": "flexberry-sample-audit-big-data-class2",
+  "className": "Class2",
+  "nameSpace": "Flexberry.Sample.AuditBigData",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "createTime",
+      "type": "date",
+      "flexberryType": "AuditNullableDateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "creator",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "editor",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "editTime",
+      "type": "date",
+      "flexberryType": "AuditNullableDateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "field21",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "field22",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": false,
+      "name": "class1",
+      "relatedTo": "flexberry-sample-audit-big-data-class1",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": false,
+      "name": "class4",
+      "relatedTo": "flexberry-sample-audit-big-data-class4",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "class3",
+      "relatedTo": "flexberry-sample-audit-big-data-class3",
+      "inverse": "class2"
+    }
+  ],
+  "projections": [
+    {
+      "name": "AuditView",
+      "modelName": "flexberry-sample-audit-big-data-class2",
+      "attrs": [
+        {
+          "name": "field21",
+          "caption": "Field21",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "field22",
+          "caption": "Field22",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "createTime",
+          "caption": "Create time",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "creator",
+          "caption": "Creator",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "editTime",
+          "caption": "Edit time",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "editor",
+          "caption": "Editor",
+          "hidden": false,
+          "index": 5
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Class1",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "field11",
+              "caption": "Field11",
+              "hidden": false,
+              "index": 7
+            }
+          ],
+          "index": 6,
+          "type": "default",
+          "caption": "Class1",
+          "name": "class1",
+          "relatedTo": "flexberry-sample-audit-big-data-class1",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Class4",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "field41",
+              "caption": "Field41",
+              "hidden": false,
+              "index": 9
+            }
+          ],
+          "index": 8,
+          "type": "default",
+          "caption": "Class4",
+          "name": "class4",
+          "relatedTo": "flexberry-sample-audit-big-data-class4",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "AuditView",
+          "caption": "Class3",
+          "name": "class3",
+          "relatedTo": "flexberry-sample-audit-big-data-class3",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "Class2E",
+      "modelName": "flexberry-sample-audit-big-data-class2",
+      "attrs": [
+        {
+          "name": "field21",
+          "caption": "Field21",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "field22",
+          "caption": "Field22",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Field11",
+          "lookupValueField": "field11",
+          "relationName": "Class1",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "field11",
+              "caption": "Field11",
+              "hidden": true,
+              "index": 3
+            }
+          ],
+          "index": 2,
+          "type": "standard",
+          "caption": "Class1",
+          "name": "class1",
+          "relatedTo": "flexberry-sample-audit-big-data-class1",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Field41",
+          "lookupValueField": "field41",
+          "relationName": "Class4",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "field41",
+              "caption": "Field41",
+              "hidden": true,
+              "index": 5
+            }
+          ],
+          "index": 4,
+          "type": "standard",
+          "caption": "Class4",
+          "name": "class4",
+          "relatedTo": "flexberry-sample-audit-big-data-class4",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "Class3E",
+          "caption": "Class3",
+          "name": "class3",
+          "relatedTo": "flexberry-sample-audit-big-data-class3",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "Class2L",
+      "modelName": "flexberry-sample-audit-big-data-class2",
+      "attrs": [
+        {
+          "name": "field21",
+          "caption": "Field21",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "field22",
+          "caption": "Field22",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "createTime",
+          "caption": "",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "creator",
+          "caption": "",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "editTime",
+          "caption": "",
+          "hidden": false,
+          "index": 6
+        },
+        {
+          "name": "editor",
+          "caption": "",
+          "hidden": false,
+          "index": 7
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Class1",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "field11",
+              "caption": "Field11",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Field11",
+          "name": "class1",
+          "relatedTo": "flexberry-sample-audit-big-data-class1",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Class4",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "field41",
+              "caption": "Field41",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Field41",
+          "name": "class4",
+          "relatedTo": "flexberry-sample-audit-big-data-class4",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

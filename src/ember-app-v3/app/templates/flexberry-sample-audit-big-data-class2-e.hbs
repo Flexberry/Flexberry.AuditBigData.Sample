@@ -1,0 +1,97 @@
+<h3 class="ui header">{{t "forms.flexberry-sample-audit-big-data-class2-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.field21
+      class=(if (v-get validationModel "field21" "isInvalid") "error")
+      label=(t "forms.flexberry-sample-audit-big-data-class2-e.field21-caption")
+      data-test-flexberry-sample-audit-big-data-class2-e-field21=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "field21" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.field22
+      class=(if (v-get validationModel "field22" "isInvalid") "error")
+      label=(t "forms.flexberry-sample-audit-big-data-class2-e.field22-caption")
+      data-test-flexberry-sample-audit-big-data-class2-e-field22=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "field22" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.flexberry-sample-audit-big-data-class2-e.class1-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.class1
+      displayAttributeName="field11"
+      autocomplete=true
+      relationName="class1"
+      projection="Class1L"
+      title=(t "forms.flexberry-sample-audit-big-data-class2-e.class1-caption")
+      readonly=readonly
+      componentName="class1Lookup"
+      class=(if (v-get validationModel "class1" "isInvalid") "error")
+      data-test-flexberry-sample-audit-big-data-class2-e-class1=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "class1" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.flexberry-sample-audit-big-data-class2-e.class4-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.class4
+      displayAttributeName="field41"
+      autocomplete=true
+      relationName="class4"
+      projection="Class4L"
+      title=(t "forms.flexberry-sample-audit-big-data-class2-e.class4-caption")
+      readonly=readonly
+      componentName="class4Lookup"
+      class=(if (v-get validationModel "class4" "isInvalid") "error")
+      data-test-flexberry-sample-audit-big-data-class2-e-class4=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "class4" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.flexberry-sample-audit-big-data-class2-e.class3-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="class3GroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.class3
+      content=model.class3
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "class3" "isInvalid") "error")
+      data-test-flexberry-sample-audit-big-data-class2-e-class3=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "class3" "message")}}
+  </div>
+</form>

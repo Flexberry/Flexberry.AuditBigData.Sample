@@ -1,0 +1,36 @@
+﻿{
+  "applicationCaption": "Flexberry sample audit big data",
+  "applicationTitle": "Flexberry sample audit big data",
+  "items": [
+    {
+      "link": null,
+      "menuName": "flexberry-sample-audit-big-data",
+      "caption": "FlexberrySampleAuditBigData",
+      "title": "FlexberrySampleAuditBigData",
+      "children": [
+        {
+          "link": "flexberry-sample-audit-big-data-class4-l",
+          "menuName": null,
+          "caption": "Class4",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "flexberry-sample-audit-big-data-class1-l",
+          "menuName": null,
+          "caption": "Class1",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "flexberry-sample-audit-big-data-class2-l",
+          "menuName": null,
+          "caption": "Class2",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}
