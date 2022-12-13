@@ -1,0 +1,25 @@
+version: '3'
+services:
+    app:
+        image: auditbigdatasample/app
+        ports:
+        - 80:80
+        environment:
+        - UploadUrl=Uploads
+        - BackendRoot=https://localhost
+        
+    postgres-audit-odata-backend:
+        image: auditbigdatasample/auditodatabackend
+        ports:
+        - 6505:6505
+      
+    postgres-db:
+        image: auditbigdatasample/postgres
+        volumes:
+        - DB:/var/lib/pgsql/data/
+        ports:
+        - 5432:5432
+
+volumes:
+  clickhousedb:
+  DB:

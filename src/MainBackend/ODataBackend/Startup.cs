@@ -15,6 +15,7 @@
     using Microsoft.Extensions.DependencyInjection;
     using NewPlatform.Flexberry.AuditBigData;
     using NewPlatform.Flexberry.AuditBigData.Serialization;
+    using NewPlatform.Flexberry.ORM;
     using NewPlatform.Flexberry.ORM.ODataService.Extensions;
     using NewPlatform.Flexberry.ORM.ODataService.Files;
     using NewPlatform.Flexberry.ORM.ODataService.Model;
@@ -149,12 +150,24 @@
 
             // Регистрируем DataService аудита.
             string auditConnectionString = Configuration.GetConnectionString("AuditConnString");
-            IDataService auditDataService = new PostgresDataService(emptySecurityManager)
-            {
-                CustomizationString = auditConnectionString
-            };
+            var environmentVariable = Environment.GetEnvironmentVariable("DOTNET_ENVIRONMENT");
 
-            container.RegisterInstance<IDataService>("auditDataService", auditDataService, InstanceLifetime.Singleton);
+            if (environmentVariable == "DockerAuditClickhouse")
+            {
+                IDataService auditDataServiceClickhouse = new ClickHouseDataService()
+                {
+                    CustomizationString = auditConnectionString
+                };
+                container.RegisterInstance<IDataService>("auditDataService", auditDataServiceClickhouse, InstanceLifetime.Singleton);
+            }
+            else
+            {
+                IDataService auditDataServicePostgres = new PostgresDataService(emptySecurityManager)
+                {
+                    CustomizationString = auditConnectionString
+                };
+                container.RegisterInstance<IDataService>("auditDataService", auditDataServicePostgres, InstanceLifetime.Singleton);
+            }
 
             // Инициализируем сервис аудита.
             var auditAppSetting = new AuditAppSetting

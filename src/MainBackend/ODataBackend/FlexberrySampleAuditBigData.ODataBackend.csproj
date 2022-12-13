@@ -12,14 +12,17 @@
     <None Update="appsettings.json"><CopyToOutputDirectory>Always</CopyToOutputDirectory></None>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="7.0.0" />
     <PackageReference Include="NewPlatform.Flexberry.Audit" Version="4.1.0-beta01" />
     <PackageReference Include="NewPlatform.Flexberry.AuditBigData" Version="1.0.0-rc04" />
     <PackageReference Include="NewPlatform.Flexberry.AuditBigData.Serialization.Json" Version="1.0.0-rc04" />
+    <PackageReference Include="NewPlatform.Flexberry.ORM.ClickHouseDataService" Version="6.0.0-beta02" />
     <PackageReference Include="NewPlatform.Flexberry.StyleCopRuleset" Version="1.0.0"></PackageReference>
-    <PackageReference Include="NewPlatform.Flexberry.ORM.ODataService" Version="6.2.0-beta13"></PackageReference>
+    <PackageReference Include="NewPlatform.Flexberry.ORM.ODataService" Version="6.2.0-beta15"></PackageReference>
     <PackageReference Include="NewPlatform.Flexberry.LockService" Version="3.0.0"></PackageReference>
     <PackageReference Include="NewPlatform.Flexberry.LogService.Objects" Version="4.0.0"></PackageReference>
-    <PackageReference Include="NewPlatform.Flexberry.ORM.PostgresDataService" Version="6.1.0-beta04"></PackageReference>
+    <PackageReference Include="NewPlatform.Flexberry.ORM.PostgresDataService" Version="6.1.0-beta05"></PackageReference>
     <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="7.0.0"></PackageReference>
     <PackageReference Include="AspNetCore.HealthChecks.NpgSql" Version="6.0.2"></PackageReference>
     <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.9"></PackageReference>
@@ -28,5 +31,17 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Objects\FlexberrySampleAuditBigData.Objects.csproj"></ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="appsettings.DockerAuditPostgres.Development.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="appsettings.DockerAuditPostgres.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
   </ItemGroup>
 </Project>

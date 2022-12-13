@@ -12,10 +12,12 @@ namespace BackendForReadPostgresDatabase
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using NewPlatform.Flexberry.AuditBigData;
+    using NewPlatform.Flexberry.ORM;
     using NewPlatform.Flexberry.ORM.ODataService.Extensions;
     using NewPlatform.Flexberry.ORM.ODataService.Files;
     using NewPlatform.Flexberry.ORM.ODataService.Model;
     using NewPlatform.Flexberry.ORM.ODataServiceCore.Common.Exceptions;
+    using System;
     using Unity;
 
     /// <summary>
@@ -28,9 +30,8 @@ namespace BackendForReadPostgresDatabase
         /// </summary>
         /// <param name="environment"></param>
         /// <param name="configuration">An application configuration properties.</param>
-        public Startup(IWebHostEnvironment environment, IConfiguration configuration)
+        public Startup(IConfiguration configuration)
         {
-            Environment = environment;
             Configuration = configuration;
         }
 
@@ -38,8 +39,6 @@ namespace BackendForReadPostgresDatabase
         /// An application configuration properties.
         /// </summary>
         public IConfiguration Configuration { get; }
-
-        private IWebHostEnvironment Environment { get; }
 
         /// <summary>
         /// Configurate application services.
@@ -85,13 +84,25 @@ namespace BackendForReadPostgresDatabase
             ISecurityManager emptySecurityManager = new EmptySecurityManager();
 
             // Регистрируем основной DataService.
-            string mainConnectionString = Configuration.GetConnectionString("AuditConnString");
-            IDataService mainDataService = new PostgresDataService(emptySecurityManager)
-            {
-                CustomizationString = mainConnectionString
-            };
+            string auditConnectionString = Configuration.GetConnectionString("AuditConnString");
+            var environmentVariable = Environment.GetEnvironmentVariable("DOTNET_ENVIRONMENT");
 
-            container.RegisterInstance<IDataService>(mainDataService, InstanceLifetime.Singleton);
+            if (environmentVariable == "DockerAuditClickhouse")
+            {
+                IDataService auditDataServiceClickhouse = new ClickHouseDataService()
+                {
+                    CustomizationString = auditConnectionString
+                };
+                container.RegisterInstance<IDataService>("auditDataService", auditDataServiceClickhouse, InstanceLifetime.Singleton);
+            }
+            else
+            {
+                IDataService auditDataServicePostgres = new PostgresDataService(emptySecurityManager)
+                {
+                    CustomizationString = auditConnectionString
+                };
+                container.RegisterInstance<IDataService>("auditDataService", auditDataServicePostgres, InstanceLifetime.Singleton);
+            }
 
             // Регистрируем FileAccessor.
             IDataObjectFileAccessor disabledDataObjectFileAccessor = new DisabledDataObjectFileAccessor();

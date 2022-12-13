@@ -13,7 +13,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NewPlatform.Flexberry.StyleCopRuleset" Version="1.0.0"></PackageReference>
-    <PackageReference Include="NewPlatform.Flexberry.ORM" Version="6.0.0"></PackageReference>
+    <PackageReference Include="NewPlatform.Flexberry.ORM" Version="6.1.0-beta03"></PackageReference>
   </ItemGroup>
   <ItemGroup />
 </Project>
