@@ -5,7 +5,9 @@
       "launchBrowser": true,
       "applicationUrl": "http://localhost:6505",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "BackendRoot": "http://localhost",
+        "AuditConnString": "SERVER=localhost;User ID=flexberryuser;Password=jhv;Port=5432;database=appdb;"
       }
     }
   }

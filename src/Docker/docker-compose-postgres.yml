@@ -6,12 +6,20 @@ services:
         - 80:80
         environment:
         - UploadUrl=Uploads
-        - BackendRoot=https://localhost
+        - DOTNET_ENVIRONMENT=DockerAuditPostgres
+        - BackendRoot=http://localhost
+        networks:
+        - audit-sample
         
-    postgres-audit-odata-backend:
+    audit-odata-backend:
         image: auditbigdatasample/auditodatabackend
         ports:
         - 6505:6505
+        environment:
+        - DOTNET_ENVIRONMENT=DockerAuditPostgres
+        - ASPNETCORE_URLS=http://+:6505
+        networks:
+        - audit-sample
       
     postgres-db:
         image: auditbigdatasample/postgres
@@ -19,7 +27,10 @@ services:
         - DB:/var/lib/pgsql/data/
         ports:
         - 5432:5432
+        networks:
+        - audit-sample
 
 volumes:
-  clickhousedb:
   DB:
+networks:
+  audit-sample:

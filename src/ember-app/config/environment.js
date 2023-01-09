@@ -4,6 +4,11 @@ module.exports = function(environment) {
   // Replace this local address to remote when backed will be published.
   var backendUrl = 'http://localhost:6500';
   var auditBigDataOdata = 'http://localhost:6505/odata';
+  
+  if (environment === 'docker') {
+    backendUrl = 'http://localhost:80';
+	auditBigDataOdata = 'http://localhost:6505/odata';
+  }
 
   if (environment === 'development-loc') {
     // Use `ember s -e development-loc` command for local backend usage.
@@ -212,11 +217,6 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     // here you can enable a production-specific feature
-  }
-  
-  if (environment === 'docker') {
-    backendUrl = 'http://localhost';
-	  auditBigDataOdata = 'http://audit-odata-backend:6505/odata';
   }
 
   return ENV;

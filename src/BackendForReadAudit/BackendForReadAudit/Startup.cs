@@ -59,14 +59,12 @@ namespace BackendForReadPostgresDatabase
 
             services.AddOData();
 
-            services.AddAuthorization();
-
             services.AddControllers().AddControllersAsServices();
 
             services.AddCors();
             services
                 .AddHealthChecks()
-                .AddNpgSql(Configuration.GetConnectionString("AuditConnString"));
+                .AddNpgSql(Configuration["AuditConnString"]);
         }
 
         /// <summary>
@@ -93,7 +91,7 @@ namespace BackendForReadPostgresDatabase
                 {
                     CustomizationString = auditConnectionString
                 };
-                container.RegisterInstance<IDataService>("auditDataService", auditDataServiceClickhouse, InstanceLifetime.Singleton);
+                container.RegisterInstance<IDataService>(auditDataServiceClickhouse, InstanceLifetime.Singleton);
             }
             else
             {
@@ -101,7 +99,7 @@ namespace BackendForReadPostgresDatabase
                 {
                     CustomizationString = auditConnectionString
                 };
-                container.RegisterInstance<IDataService>("auditDataService", auditDataServicePostgres, InstanceLifetime.Singleton);
+                container.RegisterInstance<IDataService>(auditDataServicePostgres, InstanceLifetime.Singleton);
             }
 
             // Регистрируем FileAccessor.
@@ -122,20 +120,8 @@ namespace BackendForReadPostgresDatabase
         {
             LogService.LogInfo("Инициирован запуск приложения.");
 
-            app.UseDeveloperExceptionPage();
             app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 
-            var fordwardedHeaderOptions = new ForwardedHeadersOptions
-            {
-                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
-            };
-
-            fordwardedHeaderOptions.KnownNetworks.Clear();
-            fordwardedHeaderOptions.KnownProxies.Clear();
-
-            app.UseForwardedHeaders(fordwardedHeaderOptions);
-            app.UseDefaultFiles();
-            app.UseStaticFiles();
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
@@ -153,7 +139,7 @@ namespace BackendForReadPostgresDatabase
                 };
                 var modelBuilder = new DefaultDataObjectEdmModelBuilder(assemblies, true);
 
-                builder.MapDataObjectRoute(modelBuilder, "odata", "odata");
+                builder.MapDataObjectRoute(modelBuilder);
             });
         }
     }

@@ -20,14 +20,11 @@ RUN \
 
 FROM mcr.microsoft.com/dotnet/sdk:3.1 as backend
 
-ARG DOTNET_ENVIRONMENT_VALUE
-
 COPY /src/MainBackend /MainBackend
 
 WORKDIR /MainBackend
 
 RUN \
- export DOTNET_ENVIRONMENT=$DOTNET_ENVIRONMENT_VALUE;\
  dotnet restore FlexberrySampleAuditBigData.sln;\
  dotnet build FlexberrySampleAuditBigData.sln -c Debug;\
  dotnet publish ODataBackend/FlexberrySampleAuditBigData.ODataBackend.csproj -c Debug -o out -f netcoreapp3.1
