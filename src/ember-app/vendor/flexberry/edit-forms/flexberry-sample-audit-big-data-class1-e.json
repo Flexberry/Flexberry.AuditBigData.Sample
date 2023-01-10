@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Class1",
+  "name": "FlexberrySampleAuditBigDataClass1E",
+  "className": "Class1E",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "flexberry-sample-audit-big-data-class1",
+      "modelProjection": "Class1E"
+    }
+  ]
+}

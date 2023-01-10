@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "flexberry-sample-audit-big-data-class4-e",
+  "editForm": "flexberry-sample-audit-big-data-class4-e",
+  "external": false,
+  "caption": "Class4",
+  "name": "FlexberrySampleAuditBigDataClass4L",
+  "className": "Class4L",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "flexberry-sample-audit-big-data-class4",
+      "modelProjection": "Class4L"
+    }
+  ]
+}

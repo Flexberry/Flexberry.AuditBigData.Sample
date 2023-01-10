@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AuditTestSimple
+namespace Flexberry.Sample.AuditBigData
 {
     using System;
     using System.Xml;
@@ -31,37 +31,40 @@ namespace AuditTestSimple
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
     [View("AuditView", new string[] {
-            "Field21",
-            "Field22",
+            "Field21 as \'Field21\'",
+            "Field22 as \'Field22\'",
+            "CreateTime as \'Create time\'",
+            "Creator as \'Creator\'",
+            "EditTime as \'Edit time\'",
+            "Editor as \'Editor\'",
             "Class1 as \'Class1\'",
+            "Class1.Field11 as \'Field11\'",
+            "Class4 as \'Class4\'",
+            "Class4.Field41 as \'Field41\'"})]
+    [AssociatedDetailViewAttribute("AuditView", "Class3", "AuditView", true, "", "Class3", true, new string[] {
+            ""})]
+    [View("Class2E", new string[] {
+            "Field21 as \'Field21\'",
+            "Field22 as \'Field22\'",
+            "Class1 as \'Class1\'",
+            "Class1.Field11 as \'Field11\'",
+            "Class4 as \'Class4\'",
+            "Class4.Field41 as \'Field41\'"}, Hidden=new string[] {
             "Class1.Field11",
-            "Class1.Field12",
-            "Class4",
-            "Class4.Field41",
-            "Class4.Field42",
+            "Class4.Field41"})]
+    [AssociatedDetailViewAttribute("Class2E", "Class3", "Class3E", true, "", "Class3", true, new string[] {
+            ""})]
+    [MasterViewDefineAttribute("Class2E", "Class1", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Field11")]
+    [MasterViewDefineAttribute("Class2E", "Class4", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Field41")]
+    [View("Class2L", new string[] {
+            "Field21 as \'Field21\'",
+            "Field22 as \'Field22\'",
+            "Class1.Field11 as \'Field11\'",
+            "Class4.Field41 as \'Field41\'",
             "CreateTime",
             "Creator",
             "EditTime",
             "Editor"})]
-    [AssociatedDetailViewAttribute("AuditView", "Class3", "AuditView", true, "", "Class3", true, new string[] {
-            ""})]
-    [View("Class2E", new string[] {
-            "Field21 as \'Поле21\'",
-            "Field22 as \'Поле22\'",
-            "Class1 as \'Class1\'",
-            "Class1.Field11 as \'Поле11\'",
-            "Class1.Field12 as \'Поле12\'",
-            "Class4 as \'Class4\'",
-            "Class4.Field41 as \'Поле41\'",
-            "Class4.Field42 as \'Поле42\'"})]
-    [AssociatedDetailViewAttribute("Class2E", "Class3", "Class3E", true, "", "Class3", true, new string[] {
-            ""})]
-    [View("Class2L", new string[] {
-            "Field21 as \'Поле21\'",
-            "Field22 as \'Поле22\'",
-            "Class1",
-            "Class1.Field11 as \'Поле11\'",
-            "Class1.Field12 as \'Поле12\'"})]
     public class Class2 : ICSSoft.STORMNET.DataObject, IDataObjectWithAuditFields
     {
         
@@ -77,11 +80,11 @@ namespace AuditTestSimple
         
         private string fEditor;
         
-        private AuditTestSimple.Class1 fClass1;
+        private Flexberry.Sample.AuditBigData.Class1 fClass1;
         
-        private AuditTestSimple.Class4 fClass4;
+        private Flexberry.Sample.AuditBigData.Class4 fClass4;
         
-        private AuditTestSimple.DetailArrayOfClass3 fClass3;
+        private Flexberry.Sample.AuditBigData.DetailArrayOfClass3 fClass3;
         
         // *** Start programmer edit section *** (Class2 CustomMembers)
 
@@ -153,7 +156,7 @@ namespace AuditTestSimple
         }
         
         /// <summary>
-        /// Время создания объекта.
+        /// CreateTime.
         /// </summary>
         // *** Start programmer edit section *** (Class2.CreateTime CustomAttributes)
 
@@ -184,7 +187,7 @@ namespace AuditTestSimple
         }
         
         /// <summary>
-        /// Создатель объекта.
+        /// Creator.
         /// </summary>
         // *** Start programmer edit section *** (Class2.Creator CustomAttributes)
 
@@ -216,7 +219,7 @@ namespace AuditTestSimple
         }
         
         /// <summary>
-        /// Время последнего редактирования объекта.
+        /// EditTime.
         /// </summary>
         // *** Start programmer edit section *** (Class2.EditTime CustomAttributes)
 
@@ -247,7 +250,7 @@ namespace AuditTestSimple
         }
         
         /// <summary>
-        /// Последний редактор объекта.
+        /// Editor.
         /// </summary>
         // *** Start programmer edit section *** (Class2.Editor CustomAttributes)
 
@@ -284,16 +287,14 @@ namespace AuditTestSimple
         // *** Start programmer edit section *** (Class2.Class1 CustomAttributes)
 
         // *** End programmer edit section *** (Class2.Class1 CustomAttributes)
-        [PropertyStorage(new string[] {
-                "Class1"})]
-        public virtual AuditTestSimple.Class1 Class1
+        public virtual Flexberry.Sample.AuditBigData.Class1 Class1
         {
             get
             {
                 // *** Start programmer edit section *** (Class2.Class1 Get start)
 
                 // *** End programmer edit section *** (Class2.Class1 Get start)
-                AuditTestSimple.Class1 result = this.fClass1;
+                Flexberry.Sample.AuditBigData.Class1 result = this.fClass1;
                 // *** Start programmer edit section *** (Class2.Class1 Get end)
 
                 // *** End programmer edit section *** (Class2.Class1 Get end)
@@ -317,16 +318,14 @@ namespace AuditTestSimple
         // *** Start programmer edit section *** (Class2.Class4 CustomAttributes)
 
         // *** End programmer edit section *** (Class2.Class4 CustomAttributes)
-        [PropertyStorage(new string[] {
-                "Class4"})]
-        public virtual AuditTestSimple.Class4 Class4
+        public virtual Flexberry.Sample.AuditBigData.Class4 Class4
         {
             get
             {
                 // *** Start programmer edit section *** (Class2.Class4 Get start)
 
                 // *** End programmer edit section *** (Class2.Class4 Get start)
-                AuditTestSimple.Class4 result = this.fClass4;
+                Flexberry.Sample.AuditBigData.Class4 result = this.fClass4;
                 // *** Start programmer edit section *** (Class2.Class4 Get end)
 
                 // *** End programmer edit section *** (Class2.Class4 Get end)
@@ -350,7 +349,7 @@ namespace AuditTestSimple
         // *** Start programmer edit section *** (Class2.Class3 CustomAttributes)
 
         // *** End programmer edit section *** (Class2.Class3 CustomAttributes)
-        public virtual AuditTestSimple.DetailArrayOfClass3 Class3
+        public virtual Flexberry.Sample.AuditBigData.DetailArrayOfClass3 Class3
         {
             get
             {
@@ -359,9 +358,9 @@ namespace AuditTestSimple
                 // *** End programmer edit section *** (Class2.Class3 Get start)
                 if ((this.fClass3 == null))
                 {
-                    this.fClass3 = new AuditTestSimple.DetailArrayOfClass3(this);
+                    this.fClass3 = new Flexberry.Sample.AuditBigData.DetailArrayOfClass3(this);
                 }
-                AuditTestSimple.DetailArrayOfClass3 result = this.fClass3;
+                Flexberry.Sample.AuditBigData.DetailArrayOfClass3 result = this.fClass3;
                 // *** Start programmer edit section *** (Class2.Class3 Get end)
 
                 // *** End programmer edit section *** (Class2.Class3 Get end)
@@ -392,7 +391,7 @@ namespace AuditTestSimple
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("AuditView", typeof(AuditTestSimple.Class2));
+                    return ICSSoft.STORMNET.Information.GetView("AuditView", typeof(Flexberry.Sample.AuditBigData.Class2));
                 }
             }
             
@@ -403,7 +402,7 @@ namespace AuditTestSimple
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("Class2E", typeof(AuditTestSimple.Class2));
+                    return ICSSoft.STORMNET.Information.GetView("Class2E", typeof(Flexberry.Sample.AuditBigData.Class2));
                 }
             }
             
@@ -414,7 +413,7 @@ namespace AuditTestSimple
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("Class2L", typeof(AuditTestSimple.Class2));
+                    return ICSSoft.STORMNET.Information.GetView("Class2L", typeof(Flexberry.Sample.AuditBigData.Class2));
                 }
             }
         }
@@ -458,7 +457,7 @@ namespace AuditTestSimple
             /// <summary>
             /// Включён ли аудит операции изменения.
             /// </summary>
-            public static bool UpdateAudit = true;
+            public static bool UpdateAudit = false;
             
             /// <summary>
             /// Имя представления для аудирования операции изменения.
