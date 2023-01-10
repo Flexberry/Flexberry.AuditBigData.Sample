@@ -1,5 +1,1 @@
-docker stack ls >NUL  2>NUL
-IF %ERRORLEVEL% NEQ 0 (
-	docker swarm init
-)
-docker stack deploy -c docker-compose-clickhouse.yml AuditBigDataStand
+docker-compose -f docker-compose-clickhouse.yml -p flexberrysampleauditbigdata up -d

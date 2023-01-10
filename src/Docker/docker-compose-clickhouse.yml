@@ -1,32 +1,48 @@
 version: '3'
 services:
-    main-backend:
-        image: "auditbigdatatest/main-backend:latest"
+    app:
+        image: auditbigdatasample/app
         ports:
-        - 6500:80
+        - 80:80
+        environment:
+        - UploadUrl=Uploads
+        - DOTNET_ENVIRONMENT=DockerAuditClickhouse
+        - BackendRoot=http://localhost
+        networks:
+        - audit-sample
         
-    clickhouse-audit-odata-backend:
-        image: "auditbigdatatest/clickhouse-audit-odata-backend:latest"
+    audit-odata-backend:
+        image: auditbigdatasample/auditodatabackend
         ports:
-        - 6505:80
-    
-    clickhouse-db:
-        image: auditbigdatatest/clickhouse
-        command: gosu clickhouse:clickhouse sh -c ' while :; do /usr/bin/clickhouse-server --config-file=/etc/clickhouse-server/config.xml; sleep 1; done'
-        volumes:
-        - clickhousedb:/var/lib/clickhouse
-
-        ports:
-        - 8123:8123
-        - 9000:9000
+        - 6505:6505
+        environment:
+        - DOTNET_ENVIRONMENT=DockerAuditClickhouse
+        - ASPNETCORE_URLS=http://+:6505
+        networks:
+        - audit-sample
       
     postgres-db:
-        image: auditbigdatatest/postgres
+        image: auditbigdatasample/postgres
         volumes:
         - DB:/var/lib/pgsql/data/
         ports:
         - 5432:5432
+        networks:
+        - audit-sample
+    
+    clickhouse-db:
+        image: auditbigdatasample/clickhouse
+        command: gosu clickhouse:clickhouse sh -c ' while :; do /usr/bin/clickhouse-server --config-file=/etc/clickhouse-server/config.xml; sleep 1; done'
+        volumes:
+        - clickhousedb:/var/lib/clickhouse
+        ports:
+        - 8123:8123
+        - 9000:9000
+        networks:
+        - audit-sample
 
 volumes:
   clickhousedb:
   DB:
+networks:
+  audit-sample:

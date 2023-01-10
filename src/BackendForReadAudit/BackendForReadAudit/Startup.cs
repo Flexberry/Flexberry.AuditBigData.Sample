@@ -87,6 +87,8 @@ namespace BackendForReadPostgresDatabase
 
             if (environmentVariable == "DockerAuditClickhouse")
             {
+                container.RegisterInstance<ISecurityManager>(emptySecurityManager, InstanceLifetime.Singleton);
+
                 IDataService auditDataServiceClickhouse = new ClickHouseDataService()
                 {
                     CustomizationString = auditConnectionString
