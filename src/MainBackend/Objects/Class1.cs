@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AuditTestSimple
+namespace Flexberry.Sample.AuditBigData
 {
     using System;
     using System.Xml;
@@ -31,18 +31,22 @@ namespace AuditTestSimple
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
     [View("AuditView", new string[] {
-            "Field11",
-            "Field12",
+            "Field11 as \'Field11\'",
+            "Field12 as \'Field12\'",
+            "CreateTime as \'Create time\'",
+            "Creator as \'Creator\'",
+            "EditTime as \'Edit time\'",
+            "Editor as \'Editor\'"})]
+    [View("Class1E", new string[] {
+            "Field11 as \'Field11\'",
+            "Field12 as \'Field12\'"})]
+    [View("Class1L", new string[] {
+            "Field11 as \'Field11\'",
+            "Field12 as \'Field12\'",
             "CreateTime",
             "Creator",
             "EditTime",
             "Editor"})]
-    [View("Class1E", new string[] {
-            "Field11 as \'Поле11\'",
-            "Field12 as \'Поле12\'"})]
-    [View("Class1L", new string[] {
-            "Field11 as \'Поле11\'",
-            "Field12 as \'Поле12\'"})]
     public class Class1 : ICSSoft.STORMNET.DataObject, IDataObjectWithAuditFields
     {
         
@@ -128,7 +132,7 @@ namespace AuditTestSimple
         }
         
         /// <summary>
-        /// Время создания объекта.
+        /// CreateTime.
         /// </summary>
         // *** Start programmer edit section *** (Class1.CreateTime CustomAttributes)
 
@@ -159,7 +163,7 @@ namespace AuditTestSimple
         }
         
         /// <summary>
-        /// Создатель объекта.
+        /// Creator.
         /// </summary>
         // *** Start programmer edit section *** (Class1.Creator CustomAttributes)
 
@@ -191,7 +195,7 @@ namespace AuditTestSimple
         }
         
         /// <summary>
-        /// Время последнего редактирования объекта.
+        /// EditTime.
         /// </summary>
         // *** Start programmer edit section *** (Class1.EditTime CustomAttributes)
 
@@ -222,7 +226,7 @@ namespace AuditTestSimple
         }
         
         /// <summary>
-        /// Последний редактор объекта.
+        /// Editor.
         /// </summary>
         // *** Start programmer edit section *** (Class1.Editor CustomAttributes)
 
@@ -266,7 +270,7 @@ namespace AuditTestSimple
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("AuditView", typeof(AuditTestSimple.Class1));
+                    return ICSSoft.STORMNET.Information.GetView("AuditView", typeof(Flexberry.Sample.AuditBigData.Class1));
                 }
             }
             
@@ -277,7 +281,7 @@ namespace AuditTestSimple
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("Class1E", typeof(AuditTestSimple.Class1));
+                    return ICSSoft.STORMNET.Information.GetView("Class1E", typeof(Flexberry.Sample.AuditBigData.Class1));
                 }
             }
             
@@ -288,7 +292,7 @@ namespace AuditTestSimple
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("Class1L", typeof(AuditTestSimple.Class1));
+                    return ICSSoft.STORMNET.Information.GetView("Class1L", typeof(Flexberry.Sample.AuditBigData.Class1));
                 }
             }
         }
@@ -332,7 +336,7 @@ namespace AuditTestSimple
             /// <summary>
             /// Включён ли аудит операции изменения.
             /// </summary>
-            public static bool UpdateAudit = true;
+            public static bool UpdateAudit = false;
             
             /// <summary>
             /// Имя представления для аудирования операции изменения.

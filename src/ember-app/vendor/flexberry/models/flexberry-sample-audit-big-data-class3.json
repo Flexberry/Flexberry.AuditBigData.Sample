@@ -1,0 +1,143 @@
+﻿{
+  "name": "FlexberrySampleAuditBigDataClass3",
+  "modelName": "flexberry-sample-audit-big-data-class3",
+  "className": "Class3",
+  "nameSpace": "Flexberry.Sample.AuditBigData",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "createTime",
+      "type": "date",
+      "flexberryType": "AuditNullableDateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "creator",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "editor",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "editTime",
+      "type": "date",
+      "flexberryType": "AuditNullableDateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "field31",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "field32",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "class2",
+      "relatedTo": "flexberry-sample-audit-big-data-class2",
+      "inverse": "class3"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "AuditView",
+      "modelName": "flexberry-sample-audit-big-data-class3",
+      "attrs": [
+        {
+          "name": "field31",
+          "caption": "Field31",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "field32",
+          "caption": "Field32",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "createTime",
+          "caption": "Create time",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "creator",
+          "caption": "Creator",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "editTime",
+          "caption": "Edit time",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "editor",
+          "caption": "Editor",
+          "hidden": false,
+          "index": 5
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "Class3E",
+      "modelName": "flexberry-sample-audit-big-data-class3",
+      "attrs": [
+        {
+          "name": "field31",
+          "caption": "Field31",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "field32",
+          "caption": "Field32",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
